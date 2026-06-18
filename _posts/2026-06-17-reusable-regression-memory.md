@@ -4,6 +4,9 @@ title: "Beyond TDD: Giving Coding Agents Reusable Regression Memory"
 date: 2026-06-17
 categories: [agent-driven-development]
 tags: [agents, testing, regression, data-engineering, data-quality]
+excerpt: >-
+  A practical pattern for linking high-value regression tests to bug context,
+  pytest markers, validation scripts, and future agent carryover gates.
 ---
 
 When I work with coding agents, I increasingly care less about whether they can

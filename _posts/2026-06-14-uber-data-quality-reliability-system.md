@@ -4,6 +4,9 @@ title: "How Uber Turns Data Quality Checks Into a Reliability System"
 date: 2026-06-14
 categories: [data-quality]
 tags: [data-engineering, reliability, monitoring, uber]
+excerpt: >-
+  A look at how freshness, lineage, reconciliation, alerting, and
+  auto-resolution turn data quality checks into reliability infrastructure.
 ---
 
 Most people have experienced surge pricing at some point.

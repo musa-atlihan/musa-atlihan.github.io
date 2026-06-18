@@ -4,6 +4,9 @@ title: "What I Learned Building an Agent OS for Agent-Driven Development"
 date: 2026-06-07
 categories: [agent-driven-development]
 tags: [agents, markdown, adr, engineering-process]
+excerpt: >-
+  Lessons from building a Markdown-based agent workflow with planning gates,
+  ADRs, acceptance matrices, review rules, and durable project memory.
 ---
 
 Agent-driven development is still early.
