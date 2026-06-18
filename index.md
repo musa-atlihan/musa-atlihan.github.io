@@ -4,14 +4,6 @@ title: Home
 permalink: /
 ---
 
-<section class="intro-card">
-  <h1>Projects, notes, and software development.</h1>
-  <p>
-    I write about what I build, what I learn, and the practical details worth
-    keeping around.
-  </p>
-</section>
-
 <section class="section-block">
   <div class="section-heading">
     <h2>Posts</h2>

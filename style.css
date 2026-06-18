@@ -193,21 +193,6 @@ h3 {
   text-transform: uppercase;
 }
 
-.intro-card {
-  padding: 0.2rem 0.2rem 0.4rem;
-}
-
-.intro-card h1 {
-  max-width: 38rem;
-  margin-bottom: 0.65rem;
-  font-size: 1.35rem;
-}
-
-.intro-card p:last-child {
-  max-width: 42rem;
-  margin-bottom: 0;
-}
-
 .section-block {
   display: grid;
   gap: 1rem;
@@ -388,10 +373,6 @@ h3 {
 
   .content {
     order: 1;
-  }
-
-  .intro-card {
-    padding: 0.2rem;
   }
 
   .profile-panel {
