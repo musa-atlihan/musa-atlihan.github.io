@@ -334,6 +334,26 @@ h3 {
   color: var(--green);
 }
 
+.post-content pre {
+  max-width: 100%;
+  margin: 0 0 1.1rem;
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface-soft);
+  padding: 1rem;
+}
+
+.post-content pre code {
+  display: block;
+  min-width: max-content;
+  border-radius: 0;
+  background: transparent;
+  padding: 0;
+  color: var(--text);
+  white-space: pre;
+}
+
 @media (max-width: 760px) {
   h1 {
     font-size: 1.45rem;
