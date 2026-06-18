@@ -5,7 +5,6 @@ permalink: /
 ---
 
 <section class="intro-card">
-  <p class="eyebrow">Musa Atlıhan</p>
   <h1>Projects, notes, and software development.</h1>
   <p>
     I write about what I build, what I learn, and the practical details worth
