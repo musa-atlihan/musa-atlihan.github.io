@@ -1,0 +1,14 @@
+title: Musa Atlıhan
+description: Personal website and blog for projects, learning notes, and software development.
+url: "https://musa-atlihan.github.io"
+author:
+  name: Musa Atlıhan
+  github: musa-atlihan
+  url: "https://github.com/musa-atlihan"
+
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
+timezone: Europe/Istanbul
+
+exclude:
+  - README.md

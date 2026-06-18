@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="top-nav" aria-label="Primary navigation">
+        <a class="brand" href="{{ '/' | relative_url }}">
+          <span class="brand-mark">MA</span>
+          <span>{{ site.title }}</span>
+        </a>
+        <div class="nav-links">
+          <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}aria-current="page"{% endif %}>Home</a>
+          <a href="{{ '/blog/' | relative_url }}" {% if page.url == '/blog/' %}aria-current="page"{% endif %}>Blog</a>
+          <a href="https://github.com/musa-atlihan">GitHub</a>
+        </div>
+      </nav>
+    </header>
+
+    <div class="site-shell">
+      <aside class="profile-sidebar" aria-label="Profile">
+        <section class="card profile-card">
+          <img class="avatar" src="https://github.com/musa-atlihan.png" alt="Musa Atlıhan GitHub avatar">
+          <h2>Musa Atlıhan</h2>
+          <p>{{ site.description }}</p>
+          <a class="profile-link" href="https://github.com/musa-atlihan">github.com/musa-atlihan</a>
+        </section>
+
+        <section class="card compact-card">
+          <h2>Now</h2>
+          <p>Writing notes on software projects, learning, and practical development work.</p>
+        </section>
+      </aside>
+
+      <main class="content" id="main-content">
+        {{ content }}
+      </main>
+
+      <aside class="right-sidebar" aria-label="Site notes">
+        <section class="card compact-card">
+          <h2>Topics</h2>
+          <ul class="topic-list">
+            <li>Software development</li>
+            <li>Projects</li>
+            <li>Learning notes</li>
+            <li>GitHub Pages</li>
+          </ul>
+        </section>
+
+        <section class="card compact-card">
+          <h2>About this site</h2>
+          <p>Built with GitHub Pages and Jekyll. Simple Markdown posts, custom CSS, and no frontend build step.</p>
+        </section>
+      </aside>
+    </div>
+  </body>
+</html>
