@@ -14,7 +14,7 @@
   --green: #39d98a;
   --shadow: 0 1px 0 rgba(255, 255, 255, 0.03);
   --radius: 8px;
-  --max-width: 1240px;
+  --max-width: 1040px;
 }
 
 * {
@@ -63,7 +63,7 @@ h3 {
 }
 
 h1 {
-  font-size: 2.1rem;
+  font-size: 1.55rem;
 }
 
 h2 {
@@ -136,19 +136,16 @@ h3 {
 
 .site-shell {
   display: grid;
-  grid-template-columns: minmax(220px, 270px) minmax(0, 1fr) minmax(210px, 260px);
-  gap: 1rem;
+  grid-template-columns: minmax(170px, 220px) minmax(0, 1fr);
+  gap: 1.25rem;
   width: min(100% - 2rem, var(--max-width));
   margin: 1.25rem auto 3rem;
   align-items: start;
 }
 
-.profile-sidebar,
-.right-sidebar {
+.profile-sidebar {
   position: sticky;
   top: 84px;
-  display: grid;
-  gap: 1rem;
 }
 
 .content {
@@ -157,8 +154,6 @@ h3 {
   min-width: 0;
 }
 
-.card,
-.intro-card,
 .post-card,
 .post-view {
   border: 1px solid var(--border);
@@ -167,66 +162,34 @@ h3 {
   box-shadow: var(--shadow);
 }
 
-.card {
-  padding: 1.15rem;
-}
-
-.profile-card {
-  overflow: hidden;
-}
-
-.profile-card::before {
-  content: "";
-  display: block;
-  height: 56px;
-  margin: -1.15rem -1.15rem 0;
-  background: var(--surface-soft);
-}
-
 .avatar {
-  width: 96px;
-  height: 96px;
-  margin-top: -48px;
-  border: 4px solid var(--surface);
+  width: 72px;
+  height: 72px;
+  border: 1px solid var(--border-strong);
   border-radius: 50%;
   background: var(--surface-soft);
 }
 
-.profile-card h2 {
-  margin-top: 0.8rem;
-}
-
-.profile-link {
-  display: inline-flex;
-  margin-top: 0.5rem;
-  color: var(--accent-strong);
-  font-weight: 700;
-  overflow-wrap: anywhere;
-}
-
-.compact-card h2 {
-  margin-bottom: 0.7rem;
+.profile-panel h2 {
+  margin-top: 0.75rem;
   font-size: 1rem;
 }
 
-.compact-card p {
-  margin-bottom: 0;
-  font-size: 0.95rem;
-}
-
-.topic-list {
+.profile-links {
   display: grid;
-  gap: 0.6rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  gap: 0.45rem;
+  margin-top: 0.85rem;
 }
 
-.topic-list li {
-  border-radius: 8px;
-  background: var(--surface-soft);
-  padding: 0.65rem 0.75rem;
+.profile-links a {
   color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 650;
+  overflow-wrap: anywhere;
+}
+
+.profile-links a:hover {
+  color: var(--accent-strong);
 }
 
 .eyebrow {
@@ -239,12 +202,13 @@ h3 {
 }
 
 .intro-card {
-  padding: 1.5rem;
+  padding: 0.2rem 0.2rem 0.4rem;
 }
 
 .intro-card h1 {
-  max-width: 42rem;
-  margin-bottom: 0.8rem;
+  max-width: 38rem;
+  margin-bottom: 0.65rem;
+  font-size: 1.35rem;
 }
 
 .intro-card p:last-child {
@@ -370,19 +334,9 @@ h3 {
   color: var(--green);
 }
 
-@media (max-width: 1040px) {
-  .site-shell {
-    grid-template-columns: minmax(200px, 250px) minmax(0, 1fr);
-  }
-
-  .right-sidebar {
-    display: none;
-  }
-}
-
 @media (max-width: 760px) {
   h1 {
-    font-size: 1.9rem;
+    font-size: 1.45rem;
   }
 
   .top-nav {
@@ -407,8 +361,7 @@ h3 {
     margin-top: 0.75rem;
   }
 
-  .profile-sidebar,
-  .right-sidebar {
+  .profile-sidebar {
     position: static;
   }
 
@@ -421,7 +374,31 @@ h3 {
   }
 
   .intro-card {
-    padding: 1.25rem;
+    padding: 0.2rem;
+  }
+
+  .profile-panel {
+    display: grid;
+    grid-template-columns: 52px minmax(0, 1fr);
+    column-gap: 0.75rem;
+    align-items: center;
+  }
+
+  .profile-panel .avatar {
+    grid-row: span 2;
+    width: 52px;
+    height: 52px;
+  }
+
+  .profile-panel h2 {
+    margin-top: 0;
+  }
+
+  .profile-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem 0.75rem;
+    margin-top: 0.25rem;
   }
 
   .post-header,
@@ -436,7 +413,7 @@ h3 {
   }
 
   h1 {
-    font-size: 1.7rem;
+    font-size: 1.35rem;
   }
 
   .brand {
