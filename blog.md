@@ -6,10 +6,9 @@ permalink: /blog/
 
 <section class="section-block">
   <div class="section-heading">
-    <p class="eyebrow">Blog</p>
-    <h1>All posts</h1>
+    <h1>Posts</h1>
     <p class="section-intro">
-      Notes on projects, learning, and software development.
+      Projects, learning notes, and software development.
     </p>
   </div>
 
@@ -37,7 +36,7 @@ permalink: /blog/
     {% else %}
       <article class="post-card">
         <h2>No posts yet</h2>
-        <p>New writing will appear here soon.</p>
+        <p>New posts will appear here.</p>
       </article>
     {% endfor %}
   </div>

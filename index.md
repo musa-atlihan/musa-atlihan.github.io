@@ -4,32 +4,22 @@ title: Home
 permalink: /
 ---
 
-<section class="hero-card">
-  <div class="hero-copy">
-    <p class="eyebrow">Personal portfolio and blog</p>
-    <h1>Musa Atlıhan</h1>
-    <p class="hero-text">
-      I write about projects, learning notes, and software development while
-      building a personal archive of practical work.
-    </p>
-    <div class="hero-actions">
-      <a class="button primary" href="{{ '/blog/' | relative_url }}">Read the blog</a>
-      <a class="button secondary" href="https://github.com/musa-atlihan">GitHub profile</a>
-    </div>
-  </div>
-  <div class="hero-visual" aria-hidden="true">
-    <img src="https://github.com/musa-atlihan.png" alt="">
-  </div>
+<section class="intro-card">
+  <p class="eyebrow">Musa Atlıhan</p>
+  <h1>Projects, notes, and software development.</h1>
+  <p>
+    I write about what I build, what I learn, and the practical details worth
+    keeping around.
+  </p>
 </section>
 
 <section class="section-block">
   <div class="section-heading">
-    <p class="eyebrow">Latest posts</p>
-    <h2>Recent writing</h2>
+    <h2>Posts</h2>
   </div>
 
   <div class="post-feed">
-    {% for post in site.posts limit:3 %}
+    {% for post in site.posts %}
       <article class="post-card">
         <div class="post-meta">
           <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
@@ -52,7 +42,7 @@ permalink: /
     {% else %}
       <article class="post-card">
         <h3>No posts yet</h3>
-        <p>New writing will appear here soon.</p>
+        <p>New posts will appear here.</p>
       </article>
     {% endfor %}
   </div>

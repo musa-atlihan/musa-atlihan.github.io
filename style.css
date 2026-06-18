@@ -12,7 +12,7 @@
   --accent: #4f9cf9;
   --accent-strong: #7ab7ff;
   --green: #39d98a;
-  --shadow: 0 20px 50px rgba(0, 0, 0, 0.32);
+  --shadow: 0 1px 0 rgba(255, 255, 255, 0.03);
   --radius: 8px;
   --max-width: 1240px;
 }
@@ -63,7 +63,7 @@ h3 {
 }
 
 h1 {
-  font-size: 3.4rem;
+  font-size: 2.1rem;
 }
 
 h2 {
@@ -108,10 +108,10 @@ h3 {
   width: 38px;
   height: 38px;
   flex: 0 0 38px;
-  border: 2px solid var(--accent);
+  border: 1px solid var(--border-strong);
   border-radius: 8px;
-  background: #101722;
-  color: var(--accent-strong);
+  background: var(--surface-soft);
+  color: var(--text);
   font-size: 0.86rem;
 }
 
@@ -158,7 +158,7 @@ h3 {
 }
 
 .card,
-.hero-card,
+.intro-card,
 .post-card,
 .post-view {
   border: 1px solid var(--border);
@@ -178,9 +178,9 @@ h3 {
 .profile-card::before {
   content: "";
   display: block;
-  height: 72px;
+  height: 56px;
   margin: -1.15rem -1.15rem 0;
-  background: linear-gradient(135deg, #4f9cf9, #39d98a);
+  background: var(--surface-soft);
 }
 
 .avatar {
@@ -229,81 +229,27 @@ h3 {
   color: var(--muted);
 }
 
-.hero-card {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 160px;
-  gap: 1.5rem;
-  align-items: center;
-  padding: 2rem;
-  overflow: hidden;
-  background:
-    linear-gradient(135deg, rgba(79, 156, 249, 0.16), transparent 42%),
-    var(--surface);
-}
-
-.hero-copy {
-  min-width: 0;
-}
-
 .eyebrow {
   margin-bottom: 0.55rem;
-  color: var(--green);
+  color: var(--subtle);
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0;
   text-transform: uppercase;
 }
 
-.hero-text {
-  max-width: 44rem;
-  margin-top: 1rem;
-  font-size: 1.08rem;
+.intro-card {
+  padding: 1.5rem;
 }
 
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.7rem;
-  margin-top: 1.4rem;
+.intro-card h1 {
+  max-width: 42rem;
+  margin-bottom: 0.8rem;
 }
 
-.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 44px;
-  border-radius: 8px;
-  padding: 0.7rem 1rem;
-  font-weight: 800;
-}
-
-.button.primary {
-  background: var(--accent);
-  color: #06101d;
-}
-
-.button.primary:hover {
-  background: var(--accent-strong);
-  color: #06101d;
-}
-
-.button.secondary {
-  border: 1px solid var(--border-strong);
-  background: var(--surface-soft);
-  color: var(--text);
-}
-
-.hero-visual {
-  justify-self: end;
-}
-
-.hero-visual img {
-  width: 148px;
-  height: 148px;
-  border: 6px solid rgba(255, 255, 255, 0.08);
-  border-radius: 8px;
-  background: var(--surface-soft);
-  object-fit: cover;
+.intro-card p:last-child {
+  max-width: 42rem;
+  margin-bottom: 0;
 }
 
 .section-block {
@@ -331,12 +277,11 @@ h3 {
 
 .post-card {
   padding: 1.35rem;
-  transition: border-color 160ms ease, transform 160ms ease;
+  transition: border-color 160ms ease;
 }
 
 .post-card:hover {
   border-color: var(--border-strong);
-  transform: translateY(-2px);
 }
 
 .post-card h2,
@@ -388,9 +333,7 @@ h3 {
 .post-header {
   border-bottom: 1px solid var(--border);
   padding: 2rem;
-  background:
-    linear-gradient(135deg, rgba(57, 217, 138, 0.12), transparent 34%),
-    var(--surface);
+  background: var(--surface);
 }
 
 .post-header h1 {
@@ -439,7 +382,7 @@ h3 {
 
 @media (max-width: 760px) {
   h1 {
-    font-size: 2.45rem;
+    font-size: 1.9rem;
   }
 
   .top-nav {
@@ -477,20 +420,8 @@ h3 {
     order: 1;
   }
 
-  .hero-card {
-    grid-template-columns: 1fr;
+  .intro-card {
     padding: 1.25rem;
-  }
-
-  .hero-visual {
-    justify-self: start;
-    order: -1;
-  }
-
-  .hero-visual img {
-    width: 92px;
-    height: 92px;
-    border-radius: 8px;
   }
 
   .post-header,
@@ -505,15 +436,10 @@ h3 {
   }
 
   h1 {
-    font-size: 2.1rem;
+    font-size: 1.7rem;
   }
 
   .brand {
-    width: 100%;
-  }
-
-  .hero-actions,
-  .button {
     width: 100%;
   }
 
